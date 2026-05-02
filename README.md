@@ -3,7 +3,7 @@
 <!-- Badge de status da pipeline — substitua SEU_USUARIO e SEU_REPO -->
 [![CI — Playwright Tests](https://github.com/johnnatalf/ci_testes_inteligentes_johnnata/actions/workflows/ci.yml/badge.svg)](https://github.com/johnnatalf/ci_testes_inteligentes_johnnata/actions/workflows/ci.yml)
 
-> **Disciplina:** Qualidade e Testes de Software  
+> **Disciplina:** Engenharia de Software  
 > **Atividade:** Pipeline de CI com testes manuais e com suporte de IA  
 > **Ferramenta:** [Playwright](https://playwright.dev) + [GitHub Copilot](https://github.com/features/copilot)  
 > **Aplicação alvo:** [SauceDemo](https://www.saucedemo.com)
@@ -168,8 +168,3 @@ Disponíveis na aba **Actions → [run] → Artifacts** do GitHub.
 
 ---
 
-## 👤 Acesso do Professor
-
-Repositório compartilhado com:
-- **Usuário GitHub:** `wellmor`
-- **E-mail:** `wmoliveira1@gmail.com`
