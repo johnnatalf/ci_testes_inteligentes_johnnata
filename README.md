@@ -68,8 +68,8 @@ ci_testes_inteligentes/
 ### 1. Clone o repositório
 
 ```bash
-git clone https://github.com/SEU_USUARIO/ci_testes_inteligentes_SEU_NOME.git
-cd ci_testes_inteligentes_SEU_NOME
+git clone https://github.com/johnnatalf/ci_testes_inteligentes_johnnata.git
+cd ci_testes_inteligentes_johnnata
 ```
 
 ### 2. Instale as dependências
