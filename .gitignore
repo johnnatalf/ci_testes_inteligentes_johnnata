@@ -1,0 +1,37 @@
+# Dependências
+node_modules/
+.npm/
+
+# Saída dos testes Playwright
+test-results/
+playwright-report/
+playwright/.cache/
+
+# Vídeos e screenshots geradas automaticamente
+*.png
+*.jpg
+*.webm
+*.zip
+
+# Logs
+*.log
+npm-debug.log*
+
+# Variáveis de ambiente — NUNCA commitar o .env real
+.env
+.env.local
+.env.production
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Sistema operacional
+.DS_Store
+Thumbs.db
+
+# Cache
+.cache/
+dist/
