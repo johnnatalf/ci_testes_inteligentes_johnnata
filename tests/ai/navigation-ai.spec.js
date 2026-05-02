@@ -41,8 +41,9 @@ test.describe('🤖 [IA/Copilot] Navegação com Seletores Resilientes', () => {
   //         se um ID mudar, o seletor por papel semântico continua funcionando
   test('CT-AI04 | Seletores semânticos resilientes — produtos listados', async ({ page }) => {
 
-    // 🤖 [IA] getByRole é mais robusto que #id — resiste a refatorações de HTML
-    const heading = page.getByRole('heading', { name: 'Products' });
+    // Nota: o SauceDemo usa <span class="title"> e não um <h1> semântico,
+    // por isso usamos getByText como seletor resiliente ao conteúdo
+    const heading = page.getByText('Products', { exact: true });
     await expect(heading).toBeVisible();
 
     // 🤖 [IA] Copilot sugeriu validar contagem via aria-role implícito de lista
@@ -78,8 +79,8 @@ test.describe('🤖 [IA/Copilot] Navegação com Seletores Resilientes', () => {
     await page.locator('.shopping_cart_link').click();
     await page.waitForURL('**/cart.html');
 
-    // 🤖 [IA] Copilot sugeriu validar pelo texto do heading
-    await expect(page.getByRole('heading', { name: 'Your Cart' })).toBeVisible();
+    // 🤖 [IA] Copilot sugeriu validar pelo texto — SauceDemo usa <span class="title">
+    await expect(page.getByText('Your Cart', { exact: true })).toBeVisible();
 
     // Assert: produto está no carrinho
     const cartItems = page.locator('.cart_item');
@@ -89,7 +90,7 @@ test.describe('🤖 [IA/Copilot] Navegação com Seletores Resilientes', () => {
     await page.getByRole('button', { name: 'Checkout' }).click();
     await page.waitForURL('**/checkout-step-one.html');
 
-    await expect(page.getByRole('heading', { name: 'Checkout: Your Information' })).toBeVisible();
+    await expect(page.getByText('Checkout: Your Information', { exact: true })).toBeVisible();
 
     // ── PASSO 4: Preenche informações de entrega ─────────────────────────
     // 🤖 [IA] Copilot sugeriu usar getByPlaceholder para resiliência
@@ -101,7 +102,7 @@ test.describe('🤖 [IA/Copilot] Navegação com Seletores Resilientes', () => {
     await page.waitForURL('**/checkout-step-two.html');
 
     // ── PASSO 5: Verifica resumo da compra ──────────────────────────────
-    await expect(page.getByRole('heading', { name: 'Checkout: Overview' })).toBeVisible();
+    await expect(page.getByText('Checkout: Overview', { exact: true })).toBeVisible();
 
     // 🤖 [IA] Copilot sugeriu verificar que o total está presente e formatado
     const total = page.locator('.summary_total_label');
@@ -114,7 +115,7 @@ test.describe('🤖 [IA/Copilot] Navegação com Seletores Resilientes', () => {
     await page.waitForURL('**/checkout-complete.html');
 
     // Assert: página de confirmação
-    await expect(page.getByRole('heading', { name: 'Thank you for your order!' })).toBeVisible();
+    await expect(page.getByText('Thank you for your order!', { exact: true })).toBeVisible();
 
     // 🤖 [IA] Copilot sugeriu verificar mensagem de confirmação completa
     const confirmationMsg = page.locator('.complete-text');
