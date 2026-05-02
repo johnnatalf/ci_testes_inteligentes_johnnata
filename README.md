@@ -1,7 +1,7 @@
 # 🧪 CI — Testes Inteligentes com Playwright
 
 <!-- Badge de status da pipeline — substitua SEU_USUARIO e SEU_REPO -->
-[![CI — Playwright Tests](https://github.com/SEU_USUARIO/ci_testes_inteligentes_SEU_NOME/actions/workflows/ci.yml/badge.svg)](https://github.com/SEU_USUARIO/ci_testes_inteligentes_SEU_NOME/actions/workflows/ci.yml)
+[![CI — Playwright Tests](https://github.com/johnnatalf/ci_testes_inteligentes_johnnata/actions/workflows/ci.yml/badge.svg)](https://github.com/johnnatalf/ci_testes_inteligentes_johnnata/actions/workflows/ci.yml)
 
 > **Disciplina:** Qualidade e Testes de Software  
 > **Atividade:** Pipeline de CI com testes manuais e com suporte de IA  
